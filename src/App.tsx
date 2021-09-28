@@ -1,5 +1,5 @@
-import { Box } from "./components/context/Box";
-import { ThemeconTextProvider } from "./components/context/ThemeContext";
+import { User } from "./components/context/User";
+import { UserContextProvider } from "./components/context/UserContext";
 import { Name } from "./components/Person.types";
 import { PersonList } from "./components/PersonList";
 
@@ -18,9 +18,10 @@ function App() {
   return (
     <div className="App">
       <PersonList names={names} />
-      <ThemeconTextProvider>
-        <Box />
-      </ThemeconTextProvider>
+
+      <UserContextProvider>
+        <User />
+      </UserContextProvider>
     </div>
   );
 }
