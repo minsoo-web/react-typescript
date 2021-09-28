@@ -1,6 +1,7 @@
+import { Box } from "./components/context/Box";
+import { ThemeconTextProvider } from "./components/context/ThemeContext";
 import { Name } from "./components/Person.types";
 import { PersonList } from "./components/PersonList";
-import { Counter } from "./components/state/Counter";
 
 const names: Name[] = [
   {
@@ -17,7 +18,9 @@ function App() {
   return (
     <div className="App">
       <PersonList names={names} />
-      <Counter />
+      <ThemeconTextProvider>
+        <Box />
+      </ThemeconTextProvider>
     </div>
   );
 }
